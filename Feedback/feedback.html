@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Feedback</title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="title">Feedback</div>
+        <form action="https://script.google.com/macros/s/AKfycbxNZoHImReJo70OzeY7UnCbsgBewI7HQsfTLJPAUHL1KCMmiWqGPKlKSwRqhFJw1wjujg/exec" method="post" autocomplete="off" name="google-sheet">
+        <form action="" id="Feedbackform">
+            <diV class="detail">
+                <lable class="name"> Name:</lable><br>
+                <input type="text" id="name" name="Name"><br>
+                <lable class="email"> Email-Id :</lable><br>
+                <input type="email"id="email" name="Email-Id" id=""><br>
+                <lable class="msg">Message :</lable><br>
+                <textarea type="text" id="message" name="Message"></textarea><br>
+                <button type="submit" type="submit" name="Submit" value="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const scriptURL = ''
+        const form = document.forms['formName']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thank you! your Feedback " ))
+            .then(() => {  window.location.reload(); })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+  
+</body>
+</html>
+<!-- for firevase 
+    1) form id
+    2) id od inputs
+    3) type of button is subbmit -->
